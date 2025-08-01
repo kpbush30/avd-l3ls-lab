@@ -1,0 +1,11 @@
+[project]
+name = "avd-l3ls-lab"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "anta[cli]>=1.4.0",
+    "passlib>=1.7.4",
+    "pyavd[ansible]>=5.5.1",
+]
