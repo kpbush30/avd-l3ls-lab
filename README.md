@@ -26,7 +26,11 @@ This repository will use the UV python project and package manager, you can [ins
 4. 
 5. From here you can follow any of the AVD instructional videos
 
-## Windwos Users
+## AVD Examples
+
+While this repository contains a specific AVD example, there are additional examples within the AVD Ansible collection. If you followed the steps above, you can find the additional examples under the `collections/` folder. Specifically the `collections/ansible_collections/arista/avd/examples/`
+
+## Windows Users
 
 ## MacOS Users
 

@@ -139,3 +139,7 @@ intended/
 
 # Token files
 *.tok
+
+# Ignore tmp directories
+
+tmp_*/
