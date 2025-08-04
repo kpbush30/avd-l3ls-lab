@@ -10,6 +10,9 @@ collections:
   - name: community.general
     version: 11.1.1
 
+  - name: ansible.posix
+    version: 2.1.0
+
 roles:  
   - name: avd_topo_gen
     src: https://github.com/kpbush30/avd_topo_gen.git

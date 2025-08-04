@@ -65,3 +65,11 @@ validate-site-2: ## Validate network state
 .PHONY: preplab
 preplab: ## Deploy Configs via eAPI
 	ansible-playbook playbooks/preplab.yml -i extra_configs/inventory.yml -e "target_hosts=LAB"
+
+.PHONY: topo-site-1
+topo-site-1: ## Deploy Configs via eAPI
+	ansible-playbook playbooks/pb.act-topo.yml -i fabrics/site_1/inventory.yml -e "target_hosts=SITE1_FABRIC"
+
+.PHONY: topo-site-2
+topo-site-2: ## Deploy Configs via eAPI
+	ansible-playbook playbooks/pb.act-topo.yml -i fabrics/site_2/inventory.yml -e "target_hosts=SITE2_FABRIC"

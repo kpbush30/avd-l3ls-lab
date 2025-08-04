@@ -139,6 +139,7 @@ avd_topo_gen/
 # AVD Generated files
 documentation/
 intended/  
+lab_topology/
 
 # Token files
 *.tok
