@@ -1,0 +1,11 @@
+
+# Validation mode for AVD data
+avd_data_validation_mode: warning
+
+# Custom structured configuration options
+# custom_structured_configuration_prefix: ['csc_']
+# custom_structured_configuration_list_merge: "append_rp"
+
+# Tag generation options
+generate_cv_tags:
+  topology_hints: true

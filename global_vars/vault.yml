@@ -1,0 +1,46 @@
+---
+# include any other sensitive information such as snmp configuration, tacacs, unsupported transceiver license, etc.
+vault:
+  users:
+    admin:
+      password: "$6$fXQWCLfVMPcBgkY8$FH3BtLJY1Njt3BQRClPcgmrk.kakaEmc7AAKornd0Huhhqu7Q5UTX72InHzTeRZuju0Y1Fq2LEiSygKiUgEwR1"
+    arista:
+      password: "$6$MP6W5zzH/w8YF/VL$ajgrsduwiFTqqnmIordsBFPlmJ5A1.Ob025qyy8YZebSLcSYN3JyO2QRxIsCgnLIyhHWSGVJK.UVcQW2zlNNM."
+    # admin:
+    #   password: "$6$s4.Iyf3M00gQkC.O$/s3OCBRKauFQA9u723AhLjyRYkapvKcl1v7qdiCk5Sdvqj2FIE0WGN.AC9q30fEk66adA3wu1IZyEumzXiFVZ/"
+
+  enable:
+    password: "$6$tPb.0ryluOpDGa9X$o29dqtH/bSdvachSlPNe2QbXNZXo2b/xHNCECdXrGJ0z91yrZdDDwczHmzDyVZtq6IeG23cTGD24Tfi0Nyh/R."
+
+  bgp_peerings:
+    overlay:
+      password: Q4fqtbqcZ7oQuKfuWtNGRQ==
+    underlay:
+      password: 7x4B4rnJhZB438m9+BrBfQ==
+    mlag:
+      password: 4b21pAdCvWeAqpcKDFMdWw==
+
+  avd:
+    cv_token: "sampletokenvalue"
+    ansible_user: "arista"
+    ansible_password: "arista"
+
+  tacacs:
+    server1:
+      key: "00371208530B5B144E221C0D5B165744"
+    server2:
+      key: "1336161C5C5C54386A277870672D4154"
+
+  snmpv3:
+    user1:
+      auth: "SNMP_USER1_AUTH_KEY"
+      priv: "SNMP_USER1_PRIV_KEY"
+    user2:
+      auth: "SNMP_USER2_AUTH_KEY"
+      priv: "SNMP_USER2_PRIV_KEY"
+
+  radius:
+      server1:
+        key: "RADIUS_SERVER1_ENCRYPTED_KEY"
+      server2:
+        key: "RADIUS_SERVER2_ENCRYPTED_KEY"
