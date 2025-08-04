@@ -20,7 +20,7 @@ If you are running MacOS or a distribution of Linux, you can follow the directio
 
     ```bash
     uv sync
-    ansible-galaxy collection install -r collections/requirements.yml
+    ansible-galaxy collection install -r requirements.yml
     ```
 
 3. Now you can test running your first AVD build using `uv run`.

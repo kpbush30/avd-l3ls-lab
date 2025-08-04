@@ -133,6 +133,9 @@ dmypy.json
 # Ansible collections
 ansible_collections/
 
+# Ansible Roles
+avd_topo_gen/
+
 # AVD Generated files
 documentation/
 intended/  
