@@ -1,5 +1,5 @@
 {
     "name": "AVD Universal",
-    "image": "ghcr.io/aristanetworks/avd/universal:python3.12-avd-v5.5.1",
-    "postCreateCommand": "ansible-galaxy collection install -r requirements.yml"
+    "image": "ghcr.io/aristanetworks/avd/universal:python3.12-avd-v5.5.1"
+    // "postCreateCommand": "ansible-galaxy collection install -r requirements.yml"
 }
