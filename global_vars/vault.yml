@@ -14,12 +14,11 @@ vault:
 
   bgp_peerings:
     overlay:
-      password: Q4fqtbqcZ7oQuKfuWtNGRQ==
+      password: "updatethishash"
     underlay:
-      password: 7x4B4rnJhZB438m9+BrBfQ==
+      password: "updatethishash"
     mlag:
-      password: 4b21pAdCvWeAqpcKDFMdWw==
-
+      password: "updatethishash"
   avd:
     cv_token: "sampletokenvalue"
     ansible_user: "arista"
