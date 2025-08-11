@@ -40,7 +40,7 @@ cv_run_change_control: false
 
 
 # arista.avd.cv_deploy role parameters
-cv_token: "{{ lookup('ansible.builtin.file', 'tokens/cvp.tok') }}"
+# cv_token: "{{ lookup('ansible.builtin.file', 'tokens/cvp.tok') }}"
 cv_server: cvp
 cv_verify_certs: false
 
