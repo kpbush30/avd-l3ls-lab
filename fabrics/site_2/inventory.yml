@@ -8,16 +8,16 @@ SITE2:
       children:
         SITE2_SPINES:
           hosts:
-            s1-spine1:
-            s1-spine2:
+            s2-spine1:
+            s2-spine2:
         SITE2_LEAFS:
           hosts:
-            s1-leaf1:
-            s1-leaf2:
-            s1-leaf3:
-            s1-leaf4:
-            s1-brdr1:
-            s1-brdr2:
+            s2-leaf1:
+            s2-leaf2:
+            s2-leaf3:
+            s2-leaf4:
+            s2-brdr1:
+            s2-brdr2:
     SITE2_NETWORK_SERVICES:
       children:
         SITE2_SPINES:

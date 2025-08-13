@@ -43,6 +43,32 @@ If you are a MAC user, you will most likely need to address this [known issue](h
 ```bash
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 ```
+## VSCode Dev Containers
+
+The respository is equiped with the dev container to run natively within vscode. This option works for Windows, MacOS, or Linux, leveraging containers to run AVD to generate your configurations.
+
+This will require installing the following:
+
+1. Install [VSCode](https://code.visualstudio.com/download) and the [VSCode Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+2. Install [Docker Desktop](https://docs.docker.com/get-started/introduction/get-docker-desktop/)
+
+Once installed, you can follow the 
+
+1. Open VSCode and click the `><` icon a the bottom left
+2. Select `Reopen in Container`
+3. Now you can test running your first AVD build
+4. If you would like to update the AVD container, modify the `.devcontainer/devcontainer.json` file with the new image
+
+    > You can find AVD dev container images [published here](https://github.com/aristanetworks/avd/pkgs/container/avd%2Funiversal/versions?filters%5Bversion_type%5D=tagged)
+
+    ```json
+    {
+        "name": "AVD Universal",
+        "image": "ghcr.io/aristanetworks/avd/universal:python3.12-avd-v5.5.1" << Update Image Version
+    }
+    ```
+
+5. From here you can follow any of the AVD instructional videos
 
 ## Container Options
 
@@ -56,6 +82,7 @@ A very popular option that is owned and actively maintained by Red Hat. Here's h
 2. Deploy and run the AVD container using podman
 
     ```bash
+    podman run -v /Users/kbush/env/demo-avd/avd-l3ls-lab:/avd:U -it -w /avd ghcr.io/aristanetworks/avd/universal:python3.11-avd-v5.5.1
     podman run -it ghcr.io/aristanetworks/avd/universal:python3.11-avd-v5.5.1
     ```
 
@@ -88,7 +115,7 @@ A very popular option that is owned and actively maintained by Red Hat. Here's h
 2. Deploy and run the AVD container using podman
 
     ```bash
-    docker run -it -w /avd ghcr.io/aristanetworks/avd/universal:python3.11-avd-v5.5.1
+    docker run -v avd-l3la-lab:/avd -it -w /avd ghcr.io/aristanetworks/avd/universal:python3.11-avd-v5.5.
     ```
 
 3. This should launch a shell that will give you an Ansible capable envrionment with AVD preinstalled
@@ -107,33 +134,14 @@ A very popular option that is owned and actively maintained by Red Hat. Here's h
 
 Yet another very lighweight option that is very easy to use on MacOS. You can [install Lima](https://lima-vm.io/docs/installation/) to your desktop and watch a great intro to using [AVD with Lima](https://youtu.be/Th2dx2FKtPc?feature=shared).
 
-## VSCode Dev Containers
-
-The respository is equiped with the dev container to run natively within vscode. This option works for Windows, MacOS, or Linux, leveraging containers to run AVD to generate your configurations.
-
-This will require installing the following:
-
-1. Install [VSCode](https://code.visualstudio.com/download) and the [VSCode Dev Containers Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
-2. Install [Docker Desktop](https://docs.docker.com/get-started/introduction/get-docker-desktop/)
-
-Once installed, you can follow the 
-
-1. Open VSCode and click the `><` icon a the bottom left
-2. Select `Reopen in Container`
-3. Now you can test running your first AVD build
-4. If you would like to update the AVD container, modify the `.devcontainer/devcontainer.json` file with the new image
-
-    > You can find AVD dev container images [published here](https://github.com/aristanetworks/avd/pkgs/container/avd%2Funiversal/versions?filters%5Bversion_type%5D=tagged)
-
-    ```json
-    {
-        "name": "AVD Universal",
-        "image": "ghcr.io/aristanetworks/avd/universal:python3.12-avd-v5.5.1" << Update Image Version
-    }
-    ```
-
-5. From here you can follow any of the AVD instructional videos
-
 ## AVD Examples
 
 While this repository contains a specific AVD example, there are additional examples within the AVD Ansible collection. If you followed the steps above, you can find the additional examples under the `collections/` folder. Specifically the `collections/ansible_collections/arista/avd/examples/`
+
+## References
+
+| Tool | MacOS/Linux Install | Windows Install |
+| Podman | TBD | https://github.com/containers/podman/blob/main/docs/tutorials/podman-for-windows.md | 
+
+
+podman run -v /Users/kbush/env/demo-avd/avd-l3ls-lab:/avd:U -it -w /avd ghcr.io/aristanetworks/avd/universal:python3.11-avd-v5.5.1
