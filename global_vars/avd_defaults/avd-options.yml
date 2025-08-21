@@ -9,3 +9,23 @@ avd_data_validation_mode: warning
 # Tag generation options
 generate_cv_tags:
   topology_hints: true
+
+# PREVIEW: This option is marked as "preview", meaning the data models or generated configuration can change at any time.
+# Global settings to configure the Digital Twin of the Fabric.
+digital_twin:
+
+  # Targeted Digital Twin environment.
+  # environment: <str; "act"; default="act">
+
+  # Settings for Digital Twin fabric devices.
+  fabric: # required
+
+    # OS version for ACT Digital Twin fabric devices.
+    act_os_version: 4.34.1F
+
+    # Username for ACT Digital Twin fabric devices.
+    act_username: arista
+
+    # Cleartext password for ACT Digital Twin fabric devices.
+    act_password: arista
+

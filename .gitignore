@@ -140,6 +140,7 @@ avd_topo_gen/
 documentation/
 intended/  
 lab_topology/
+digital_twin/
 
 # Token files
 *.tok
